@@ -1,0 +1,18 @@
+<h1 class="jumbotron text-center">Wacky Widgets</h1>
+
+<h3 class="text-center">No Widgets Exist</h3>
+
+<hr>
+
+<h4>Add Widget:</h4>
+<%= form_for @widget do |f| %>
+    <div class="form-group">
+        <%= f.text_field :dscription, class: "form-control" %>
+    </div>
+    <div class="form-group">
+        <%= f.text_field :quantity, class: "form-control" %>
+    </div>
+    <button>
+        <%= f.submit "Add Widget", class: "btn btn-success" %>
+    </button>
+<% end %>
