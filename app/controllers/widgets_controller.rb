@@ -3,24 +3,17 @@ class WidgetsController < ApplicationController
         @widgets = Widget.all
         @widget = Widget.new
     end
-    
-    def new
-        @widget = Widget.new
-    end
 
     def create
         @widget = Widget.new(widget_params)
         @widget.save
-        redirect_to widget_path(@widget)
-    end
-
-    def show
+        redirect_to root_path
     end
 
     def destroy
         @widget = Widget.find(params[:id])
         @widget.destroy
-        redirect to widget_path(@widget)
+        redirect_to root_path
     end
 
     private
